@@ -21,6 +21,9 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" allow displaying line number
+set number
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
@@ -80,6 +83,8 @@ if has("autocmd")
 
   augroup END
 
+  "Show at startup
+  autocmd vimenter * NERDTree 
 else
 
   set autoindent		" always set autoindenting on
