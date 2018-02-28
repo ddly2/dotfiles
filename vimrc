@@ -24,6 +24,9 @@ set backspace=indent,eol,start
 " allow displaying line number
 set number
 
+" turn off backup, stop making *~ files
+set nobackup
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
