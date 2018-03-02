@@ -21,17 +21,20 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" allow displaying line number
+" displaying line number
 set number
 
-" turn off backup, stop making *~ files
-set nobackup
+" linespace
+set linespace=3
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
-  set backup		" keep a backup file (restore to previous version)
-  set undofile		" keep an undo file (undo changes after closing)
+  " set backup		" keep a backup file (restore to previous version)
+  " set undofile		" keep an undo file (undo changes after closing)
+
+  " turn off backup, stop making *~ files
+  set nobackup
 endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -58,6 +61,12 @@ endif
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+
+  " Set slate as default theme
+  colorscheme slate
+
+  " Set font to Monaco with size 12
+  set guifont=Monaco:h12
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -146,5 +155,6 @@ call plug#begin('~/.vim/plugged')
 "
 "   " Vim script for text filtering and alignment
     Plug 'godlygeek/tabular'
+
 "   " Initialize plugin system
 call plug#end()
