@@ -1,4 +1,7 @@
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # link from dotfiles
@@ -46,4 +49,10 @@ staging_ip() {
   aws ec2 describe-instances \
     --query "Reservations[*].Instances[?Tags[?Key=='Name' && Value=='$v']].[ NetworkInterfaces[*].PrivateIpAddress]" \
     --output text
+}
+
+# looking for certain version commit
+brew_commit() {
+	cd "$(brew --repo homebrew/core)" &&
+	git log Formula/$1.rb
 }

@@ -10,12 +10,13 @@
 export HOMEBREW_PATH="/usr/local/Cellar"
 
 export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:$HOMEBREW_PATH/postgresql@9.4/9.4.15/bin"
-export PATH="$PATH:$HOMEBREW_PATH/redis@2.8/bin"
-export PATH="$PATH:$HOMEBREW_PATH/mysql@5.5/bin"
-export PATH="$PATH:$HOMEBREW_PATH/memcached/bin"
-export PATH="$PATH:$HOMEBREW_PATH/qt@5.5/bin"
-export PATH="$PATH:$HOMEBREW_PATH/elasticsearch@5.6/bin"
+# export PATH="$PATH:$HOMEBREW_PATH/postgresql@9.4/bin"
+# export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+# export PATH="$PATH:$HOMEBREW_PATH/redis@2.8/bin"
+# export PATH="$PATH:$HOMEBREW_PATH/mysql@5.5/bin"
+# export PATH="$PATH:$HOMEBREW_PATH/memcached/bin"
+# export PATH="$PATH:$HOMEBREW_PATH/qt@5.5/bin"
+# export PATH="$PATH:$HOMEBREW_PATH/elasticsearch@5.6/bin"
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH="$PATH:$JAVA_HOME/bin"
@@ -28,7 +29,7 @@ export PATH="$PATH:$HIVE_HOME/bin"
 
 export VIM_RUNTIME_PATH="$HOMEBREW_PATH/vim/8.0.1350/share/vim/vim80/"
 
-export GOROOT="$HOMEBREW_PATH/go/1.9.3/libexec"
+export GOROOT="$HOMEBREW_PATH/go@1.9/libexec"
 export PATH="$PATH:$GOROOT/bin"
 
 export GOPATH="$HOME/workspace/go"
