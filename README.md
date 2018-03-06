@@ -95,6 +95,9 @@ Or, if you don't want/need a background service you can just run:
 
 ## Hadoop
 
+`brew install hadoop`
+
 ## Hive
 
+`brew install hive`
 
