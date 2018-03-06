@@ -7,29 +7,30 @@
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export HOMEBREW_PATH="/usr/local/Cellar"
-
 export PATH="$PATH:/usr/local/sbin"
-# export PATH="$PATH:$HOMEBREW_PATH/postgresql@9.4/bin"
-# export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-# export PATH="$PATH:$HOMEBREW_PATH/redis@2.8/bin"
-# export PATH="$PATH:$HOMEBREW_PATH/mysql@5.5/bin"
-# export PATH="$PATH:$HOMEBREW_PATH/memcached/bin"
-# export PATH="$PATH:$HOMEBREW_PATH/qt@5.5/bin"
-# export PATH="$PATH:$HOMEBREW_PATH/elasticsearch@5.6/bin"
+
+export HOMEBREW_PATH="/usr/local/Cellar"
+export HOMEBREW_LN_PATH="/usr/local/opt/"
+
+export PATH="$PATH:$(brew --prefix qt@5.5)/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/postgresql@9.4/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/redis@2.8/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/mysql@5.5/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/memcached/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/elasticsearch@5.6/bin"
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH="$PATH:$JAVA_HOME/bin"
 
-export HADOOP_HOME="$HOMEBREW_PATH/hadoop/2.8.1"
+export HADOOP_HOME="$HOMEBREW_LN_PATH/hadoop"
 export PATH="$PATH:$HADOOP_HOME/bin"
 
-export HIVE_HOME="$HOMEBREW_PATH/hive/2.1.1"
+export HIVE_HOME="$HOMEBREW_LN_PATH/hive"
 export PATH="$PATH:$HIVE_HOME/bin"
 
-export VIM_RUNTIME_PATH="$HOMEBREW_PATH/vim/8.0.1350/share/vim/vim80/"
+export VIM_RUNTIME_PATH="$HOMEBREW_LN_PATH/vim@8.0/share/vim/vim80/"
 
-export GOROOT="$HOMEBREW_PATH/go@1.9/libexec"
+export GOROOT="$HOMEBREW_LN_PATH/go/libexec"
 export PATH="$PATH:$GOROOT/bin"
 
 export GOPATH="$HOME/workspace/go"
