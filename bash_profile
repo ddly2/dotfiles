@@ -7,17 +7,15 @@
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export PATH="$PATH:/usr/local/sbin"
+export HOMEBREW_LN_PATH="/usr/local/opt"
 
-export HOMEBREW_PATH="/usr/local/Cellar"
-export HOMEBREW_LN_PATH="/usr/local/opt/"
-
-export PATH="$PATH:$(brew --prefix qt@5.5)/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/qt@5.5/bin"
 export PATH="$PATH:$HOMEBREW_LN_PATH/postgresql@9.4/bin"
 export PATH="$PATH:$HOMEBREW_LN_PATH/redis@2.8/bin"
 export PATH="$PATH:$HOMEBREW_LN_PATH/mysql@5.5/bin"
 export PATH="$PATH:$HOMEBREW_LN_PATH/memcached/bin"
 export PATH="$PATH:$HOMEBREW_LN_PATH/elasticsearch@5.6/bin"
+export PATH="$PATH:$HOMEBREW_LN_PATH/gpg2/bin"
 
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH="$PATH:$JAVA_HOME/bin"
